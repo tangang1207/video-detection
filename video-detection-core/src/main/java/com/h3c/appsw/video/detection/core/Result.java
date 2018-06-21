@@ -1,12 +1,11 @@
 package com.h3c.appsw.video.detection.core;
 
-import com.alibaba.fastjson.JSON;
-
 /**
  * 统一API响应结果封装
  */
 public class Result<T> {
     private int code;
+    private boolean success;
     private String message;
     private T data;
 
@@ -34,11 +33,27 @@ public class Result<T> {
 
     public Result setData(T data) {
         this.data = data;
+        this.success = true;
+        return this;
+    }
+
+
+    public boolean isSuccess() {
+        return success;
+    }
+
+    public Result setSuccess(boolean success) {
+        this.success = success;
         return this;
     }
 
     @Override
     public String toString() {
-        return JSON.toJSONString(this);
+        return "Result{" +
+                "code=" + code +
+                ", success=" + success +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
     }
 }

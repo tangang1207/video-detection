@@ -8,6 +8,7 @@ public class ResultGenerator {
 
     public static Result genSuccessResult() {
         return new Result()
+                .setSuccess(true)
                 .setCode(ResultCode.SUCCESS)
                 .setMessage(DEFAULT_SUCCESS_MESSAGE);
     }
@@ -21,6 +22,7 @@ public class ResultGenerator {
 
     public static Result genFailResult(String message) {
         return new Result()
+                .setSuccess(false)
                 .setCode(ResultCode.FAIL)
                 .setMessage(message);
     }

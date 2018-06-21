@@ -8,5 +8,10 @@
     <artifactId>video-detection-api</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <groupId>com.h3c.appsw</groupId>
+        <artifactId>video-detection</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
 
 </project>
